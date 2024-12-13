@@ -44,21 +44,38 @@ header {
 }
 
 .header-title-line {
-  padding: 0.25rem 0.5rem;
   display: flex;
-  flex-flow: row nowrap;
   justify-content: space-between;
   text-align: center;
+  max-height: min-content;
 }
 
-.header-title-line img {
-  width: 167px;
-  height: 70px;
+.logo {
+  display: flex;
+  width: 25%;
+  justify-content: center;
+  margin: auto;
+}
+
+.logo img {
+  width: 200px;
+  height: 120px;
+}
+
+.button {
+  display: flex;
+  margin: auto;
+  justify-content: center;
+  width: 25%;
+}
+
+.button button {
+  text-align: center;
 }
 
 .h1 {
   width: 50%;
-  padding-right: 5rem;
+  font-size: var(--FS-H1);
 }
 
 .menu-button {
@@ -139,6 +156,7 @@ nav ul {
   list-style-type: none;
   display: flex;
   flex-flow: column nowrap;
+  padding: 0;
 }
 
 nav li {
@@ -232,7 +250,7 @@ nav a:focus {
 }
 
 .text span {
-display: block;
+  display: block;
 }
 
 .gallery-container {
@@ -289,20 +307,29 @@ display: block;
 }
 
 @media (max-width: 768px) {
-
   .header-title-line {
-    padding: 0.25rem 0.5rem;
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: space-between;
-    text-align: center;
-
     flex-direction: column;
   }
-  
-  .header-title-line img {
-    width: 167px;
-    height: 70px;
+
+  .h1 {
+    margin: auto;
+  }
+
+  .menu-button,
+  .menu-icon {
+    display: none;
+  }
+
+  header {
+    position: relative;
+  }
+
+  nav {
+    display: block;
+    animation: none; /* Zrušíme animáciu */
+    transform: scaleY(
+      1
+    ); /* Zabezpečíme, že menu bude okamžite plne zobrazené */
   }
 
   .text-image-container {
@@ -330,7 +357,7 @@ display: block;
     height: auto;
   }
 
-  .footer-container{
+  .footer-container {
     flex-direction: column;
   }
 
