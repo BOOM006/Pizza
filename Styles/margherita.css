@@ -23,7 +23,7 @@ body {
   font-family: "Times New Roman";
   background-image: url("/obrazky/Pizza.jpg"),
     linear-gradient(to left, var(--GRADIENT-COLOR), var(--BGCOLOR));
-  background-repeat:round;
+  background-repeat: round;
   background-size: 100%;
   background-position: center;
 }
@@ -216,11 +216,9 @@ h2 {
 }
 
 .table-container {
-padding-top: 2rem;
+  padding-top: 2rem;
   width: 33%;
 }
-
-
 
 td {
   padding: 0.5rem;
@@ -244,7 +242,6 @@ td {
 }
 
 .calories {
-
   padding-bottom: 1rem;
   display: flex;
   justify-content: center;
@@ -256,6 +253,36 @@ td {
 
 .calories caption {
   font-weight: bold;
+}
+
+.footer-container {
+  margin-top: 1rem;
+  background-color: var(--HEADER-BGCOLOR);
+  display: flex;
+  justify-content: space-around;
+  justify-items: center;
+  width: 100%;
+  justify-self: center;
+  gap: 0;
+}
+
+.footer {
+  width: 33%;
+}
+
+.footer img {
+  width: 10vw;
+  display: flex;
+  justify-self: center;
+}
+
+.footer p {
+  text-align: center;
+}
+
+.socials {
+  display: flex;
+  justify-content: space-around;
 }
 
 @media (max-width: 768px) {
@@ -280,5 +307,4 @@ td {
   .payment-container {
     width: 100%;
   }
-
 }

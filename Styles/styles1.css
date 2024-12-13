@@ -26,6 +26,7 @@ body {
   background-size: 100%;
   background-position: center;
   font-size: var(--FS-TEXT);
+  background-repeat: round;
 }
 
 body img {
@@ -210,6 +211,36 @@ nav a:focus {
   padding-bottom: 0.8rem;
   color: #333;
   font-weight: 600;
+}
+
+.footer-container {
+  margin-top: 1rem;
+  background-color: var(--HEADER-BGCOLOR);
+  display: flex;
+  justify-content: space-around;
+  justify-items: center;
+  width: 100%;
+  justify-self: center;
+  gap: 0;
+}
+
+.footer {
+  width: 33%;
+}
+
+.footer img {
+  width: 10vw;
+  display: flex;
+  justify-self: center;
+}
+
+.footer p {
+  text-align: center;
+}
+
+.socials {
+  display: flex;
+  justify-content: space-around;
 }
 
 
