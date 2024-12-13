@@ -1,0 +1,72 @@
+table {
+  margin: auto;
+  width: 95%;
+  margin-top: 2rem;
+  background-color: var(--TABLE-BGCOLOR);
+  border: 5px double black;
+  outline: 3px solid black;
+}
+
+th,
+td {
+  border-bottom: 3px solid yellow;
+  vertical-align: middle;
+}
+th {
+  text-align: left;
+  font-size: 120%;
+}
+
+.offer-grid {
+  display: grid;
+  width: 90%;
+  gap: 1rem;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  grid-template-columns: repeat(
+    auto-fill,
+    minmax(30%, 1fr)
+  );
+margin: auto;}
+
+.offer {
+  border-radius: 0.8rem;
+  background-color: var(--TABLE-BGCOLOR);
+  border: #666 solid;
+  width: 100%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+}
+.offer h2 {
+  text-align: center;
+}
+
+.offer a {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 0.8rem;
+}
+
+.centering {
+  display: flex;
+  flex-direction: row;
+  justify-items: space-between;
+  gap: 6rem;
+}
+
+.image {
+  width: 8vw;
+  height: auto;
+  outline: 2px solid var(--OUTLINE-COLOR);
+  display: flex;
+  align-self: flex-end;
+  justify-self: flex-end;
+}
+
+.image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}

@@ -1,0 +1,96 @@
+header {
+  background-image: url(obrazky/header-bg.jpg);
+}
+
+h1 {
+  color: rgb(255, 165, 0);
+}
+h2 {
+  color: black;
+  background-color: orange;
+  font-family: Arial;
+}
+
+nav {
+  background-color: #ffe4c4;
+}
+
+nav a {
+  color: #333333;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+nav a:hover {
+  background-color: #FF9900;
+}
+
+body {
+  font-family: Verdana;
+}
+p {
+  font-family: "Times New Roman";
+}
+address {
+  font-family: "Courier New";
+}
+
+.ponuka {
+  list-style-type: none;
+  list-style-image: url("obrazky/odrazka.png");
+}
+
+a {
+  color: #CC6600;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+a:hover {
+  color: white;
+  background-color: #ff9900;
+  font-size: 110%;
+  text-decoration: underline;
+  font-variant: small-caps;
+}
+
+aside {
+  text-align: center;
+  color: black;
+  border-left: #ff9900 2px solid;
+  border-right: #ff9900 2px solid;
+  border-bottom: #ff9900 2px solid;
+}
+
+article {
+  border: grey 2px solid;
+}
+
+article:hover {
+  background-color: gainsboro;
+}
+
+footer {
+  background-color: #ff9900;
+  color: black;
+}
+
+footer a{
+  color: #990033;
+}
+
+.galeria img {
+  border: black 2px solid;
+}
+section {
+  margin: 10px;
+}
+
+th, td {
+  border-bottom: 3px solid yellow;
+  vertical-align: middle;
+}
+th {
+  text-align: left;
+  font-size: 120%;
+}
