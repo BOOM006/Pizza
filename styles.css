@@ -269,6 +269,10 @@ display: block;
   width: 33%;
 }
 
+.footer:last-child {
+  background-color: red;
+}
+
 .footer img {
   width: 10vw;
   display: flex;
