@@ -45,9 +45,19 @@ header {
 
 .header-title-line {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  align-items: center;
+}
+
+.header-content {
+  display: flex;
+  gap: 5rem;
+  margin: auto;
+  width: 66%;
+}
+
+.header-content :last-child {
   text-align: center;
-  max-height: min-content;
 }
 
 .logo {
@@ -66,7 +76,7 @@ header {
   display: flex;
   margin: auto;
   justify-content: center;
-  width: 25%;
+  width: 10%;
 }
 
 .button button {
@@ -74,7 +84,7 @@ header {
 }
 
 .h1 {
-  width: 50%;
+  width: 70%;
   font-size: var(--FS-H1);
 }
 
@@ -307,21 +317,47 @@ nav a:focus {
 }
 
 @media (max-width: 768px) {
-  .header-title-line {
-    flex-direction: column;
+  header {
+    position: relative;
   }
 
-  .h1 {
-    margin: auto;
+  .header-title-line {
+    gap: 0;
+    justify-content: center; /* Zarovná všetko v rámci tohto kontajnera */
+  }
+
+  .header-content {
+    gap: 0rem;
+    flex-direction: column;
+    align-items: center; /* Zarovná všetky deti do stredu */
+    justify-content: center; /* Zarovná ich aj vertikálne */
+    width: 100%; /* Šírka pre celý dostupný priestor */
+  }
+
+  .button {
+    display: none;
+  }
+
+  .h1 h1 {
+    margin-bottom: 0rem;
+    margin: 0; /* Zruší predchádzajúce nastavenie marginov */
+    text-align: center; /* Explicitné centrovanie textu */
+    width: 100%; /* Zabezpečí, že text sa zarovná na stred šírky rodiča */
+  }
+
+  nav ul {
+    margin-bottom: 0rem;
   }
 
   .menu-button,
   .menu-icon {
     display: none;
+    width: 0px;
   }
 
-  header {
-    position: relative;
+  .menu-button,
+  .menu-icon {
+    display: none;
   }
 
   nav {
@@ -332,9 +368,32 @@ nav a:focus {
     ); /* Zabezpečíme, že menu bude okamžite plne zobrazené */
   }
 
+  :is(header:hover, header:focus-within) + main {
+    margin-top: calc(0rem + 0px); /* Posun gridu o výšku navigácie */
+  }
+
+  h2 {
+    margin-top: 0rem;
+  }
+
+  .offer-section {
+    margin-top: 0.5rem;
+    text-align: center;
+    width: 95%;
+    justify-self: center;
+    justify-items: center;
+    justify-content: space-between;
+    background-color: var(--TABLE-BGCOLOR);
+  }
+
+  main {
+    margin-top: 0;
+  }
+
   .text-image-container {
     flex-direction: column;
     text-align: center;
+    margin-top: 0.5rem;
   }
 
   .image {
@@ -350,6 +409,8 @@ nav a:focus {
   .gallery-container {
     flex-direction: column;
     height: auto;
+    padding: 0;
+    margin-top: 0.5rem;
   }
 
   .gallery {
@@ -361,7 +422,16 @@ nav a:focus {
     flex-direction: column;
   }
 
+  .footer-container {
+    flex-direction: column;
+  }
+
   .footer {
+    width: 100%;
     margin: auto;
+  }
+
+  .footer :first-child {
+    padding-top: 0.8rem;
   }
 }
