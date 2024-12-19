@@ -7,6 +7,7 @@
   --TABLE-BGCOLOR: hsla(0, 0%, 100%, 0.711);
   --FOOTER-BGCOLOR: rgb(194, 186, 186);
 
+
   /*FONTS*/
   --FF: "Times New Roman";
   --FS-TEXT: clamp(1rem, 1.8vw, 5rem); /*Texty - a, p*/
@@ -195,47 +196,120 @@ nav a:focus {
   transition: all 0.3s;
 }
 
-.offer-grid {
-  display: grid;
-  width: 90%;
-  gap: 1rem;
+.text-image-container {
+  border-radius: 3rem;
+  margin-top: 8rem;
+  display: flex;
   justify-content: space-between;
-  grid-template-columns: repeat(auto-fill, minmax(30%, 1fr));
-  margin: auto;
-  margin-top: 14rem;
-}
-
-.offer {
-  border-radius: 15px;
-  border: 3px #666 solid;
+  width: 95%;
   background-color: var(--TABLE-BGCOLOR);
-  display: flex;
-  flex-direction: column;
-}
-.offer h2 {
-  text-align: center;
-  font-size: var(--FS-H2);
-}
-
-.centering {
-  margin: 0 30px 0 10px;
-  display: flex;
-  justify-content: space-between;
+  justify-self: center;
+  margin-bottom: 3rem;
 }
 
 .image {
-  width: 90px;
+  width: 40%;
 }
 
-.image img {
-  border-radius: 50%;
+.text {
+  width: 60%;
 }
 
-.offer a {
+.text img {
+  width: 80px;
+}
+
+span {
+  font-weight: bold;
+}
+
+.udaje-container {
+  display: flex;
+  justify-content: space-between;
+  width: 95%;
+  margin: auto;
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.faktura-udaje {
+  display: flex;
+  flex-direction: column;
   text-align: center;
-  padding-bottom: 0.8rem;
-  color: #333;
-  font-weight: 600;
+  width: 50%;
+  background-color: var(--TABLE-BGCOLOR);
+  border-radius: 3rem;
+}
+
+.otvaracie-h {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  text-align: center;
+  background-color: var(--TABLE-BGCOLOR);
+  border-radius: 3rem;
+}
+
+.italic {
+font-style: italic ;
+}
+
+.ico-dic-container {
+  display: flex;
+  justify-content: space-around;
+}
+
+.forms {
+  display: flex;
+  margin: auto;
+  width: 75%;
+  flex-direction: column;
+  text-align: center;
+  background-color: var(--TABLE-BGCOLOR);
+  border-radius: 3rem;
+}
+
+.forms span {
+  display: block;
+  font-weight: normal;
+}
+
+.rozlozenie {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+  gap: 0;
+}
+
+.username {
+  display: flex;
+  flex-direction: column;
+  width: 45%;
+}
+
+.email {
+  display: flex;
+  flex-direction: column;
+  width: 45%;
+}
+
+.num {
+  display: flex;
+  flex-direction: column;
+  width: 95%;
+  margin: auto;
+}
+
+.message {
+  display: flex;
+  flex-direction: column;
+  width: 95%;
+  margin: auto;
+}
+
+input {
+  height: 40px;
+  border-radius: 0.5rem;
 }
 
 .footer-container {
@@ -262,7 +336,6 @@ nav a:focus {
   display: flex;
   justify-self: center;
   padding-top: 1rem;
-
 }
 
 .footer p {
@@ -307,12 +380,6 @@ nav a:focus {
 
   nav ul {
     margin-bottom: 0rem;
-    flex-direction: column;
-    gap: 0rem;
-  }
-
-  nav li {
-    padding: 1rem;
   }
 
   .menu-button,
@@ -338,17 +405,54 @@ nav a:focus {
     margin-top: calc(0rem + 0px); /* Posun gridu o výšku navigácie */
   }
 
-  .offer-grid {
-    grid-template-columns: repeat(auto-fill, minmax(50%, 1fr)); /* 2 stĺpce */
-    margin-top: 1rem;
+  h2 {
+    margin-top: 0rem;
+  }
+
+  .offer-section {
+    margin-top: 0.5rem;
+    text-align: center;
+    width: 95%;
+    justify-self: center;
+    justify-items: center;
+    justify-content: space-between;
+    background-color: var(--TABLE-BGCOLOR);
+  }
+
+  main {
+    margin-top: 0;
+  }
+
+  .text-image-container {
+    flex-direction: column;
+    text-align: center;
+    margin-top: 0.5rem;
   }
 
   .image {
-    width: 100px; /* Väčší obrázok na mobil */
+    margin: auto;
+  }
+  .text {
+    margin: auto;
+  }
+  .zalomenie {
+    display: block;
   }
 
-  .centering {
-    margin: 0 10px;
+  .gallery-container {
+    flex-direction: column;
+    height: auto;
+    padding: 0;
+    margin-top: 0.5rem;
+  }
+
+  .gallery {
+    margin: auto;
+    height: auto;
+  }
+
+  .footer-container {
+    flex-direction: column;
   }
 
   .footer-container {
@@ -358,5 +462,9 @@ nav a:focus {
   .footer {
     width: 100%;
     margin: auto;
+  }
+
+  .footer :first-child {
+    padding-top: 0.8rem;
   }
 }

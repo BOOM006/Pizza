@@ -5,7 +5,7 @@
   --GRADIENT-COLOR: rgb(246, 217, 217);
   --BGCOLOR: #e59885;
   --TABLE-BGCOLOR: hsla(0, 0%, 100%, 0.711);
-  --FOOTER-BGCOLOR: rgb(194, 186, 186);
+  --NAPOJ-BGCOLOR: hsla(0, 0%, 50%, 0.738);
 
   /*FONTS*/
   --FF: "Times New Roman";
@@ -138,7 +138,7 @@ header {
   display: block;
 }
 :is(header:hover, header:focus-within) + main {
-  margin-top: calc(6rem + 24px); /* Posun gridu o výšku navigácie */
+  margin-top: calc(19rem + 24px); /* Posun gridu o výšku navigácie */
   transition: margin-top 0.3s ease-in-out;
 }
 nav {
@@ -195,52 +195,60 @@ nav a:focus {
   transition: all 0.3s;
 }
 
-.offer-grid {
-  display: grid;
-  width: 90%;
-  gap: 1rem;
-  justify-content: space-between;
-  grid-template-columns: repeat(auto-fill, minmax(30%, 1fr));
-  margin: auto;
-  margin-top: 14rem;
+main {
+  margin-top: 13rem;
 }
 
-.offer {
-  border-radius: 15px;
-  border: 3px #666 solid;
-  background-color: var(--TABLE-BGCOLOR);
+.napoje-container {
+  width: 95%;
   display: flex;
   flex-direction: column;
-}
-.offer h2 {
-  text-align: center;
-  font-size: var(--FS-H2);
+  margin: auto;
+  background-color: var(--TABLE-BGCOLOR);
+  border-radius: 3rem;
+  padding-bottom: 2rem;
 }
 
-.centering {
-  margin: 0 30px 0 10px;
+.sytene-grid,
+.nesytene-grid,
+.energy-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(30%, 1fr));
+  gap: 0.5rem;
+  justify-items: center;
+}
+
+.sytene-grid img,
+.nesytene-grid img,
+.energy-grid img {
+width: 160px;
+height: 160px;}
+
+.h2 {
+  padding-top: 2rem;
+  margin: auto;
+}
+
+.napoj {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  padding: 0.5rem;
+  width: 80%;
+  border: 2px solid #333;
+background-color: var(--TABLE-BGCOLOR);
+border-radius: 3rem;
 }
 
-.image {
-  width: 90px;
-}
-
-.image img {
-  border-radius: 50%;
-}
-
-.offer a {
-  text-align: center;
-  padding-bottom: 0.8rem;
-  color: #333;
-  font-weight: 600;
+.image-text {
+  display: flex;
+justify-content: center;
 }
 
 .footer-container {
   margin-top: 1rem;
-  background-color: var(--FOOTER-BGCOLOR);
+  background-color: var(--HEADER-BGCOLOR);
   display: flex;
   justify-content: space-around;
   justify-items: center;
@@ -258,17 +266,13 @@ nav a:focus {
 }
 
 .footer img {
-  width: 70px;
+  width: 10vw;
   display: flex;
   justify-self: center;
-  padding-top: 1rem;
-
 }
 
 .footer p {
   text-align: center;
-  margin-bottom: 0;
-
 }
 
 .socials {
@@ -307,12 +311,6 @@ nav a:focus {
 
   nav ul {
     margin-bottom: 0rem;
-    flex-direction: column;
-    gap: 0rem;
-  }
-
-  nav li {
-    padding: 1rem;
   }
 
   .menu-button,
@@ -332,10 +330,6 @@ nav a:focus {
     transform: scaleY(
       1
     ); /* Zabezpečíme, že menu bude okamžite plne zobrazené */
-  }
-
-  :is(header:hover, header:focus-within) + main {
-    margin-top: calc(0rem + 0px); /* Posun gridu o výšku navigácie */
   }
 
   .offer-grid {
@@ -358,5 +352,9 @@ nav a:focus {
   .footer {
     width: 100%;
     margin: auto;
+  }
+
+  .footer :first-child {
+    padding-top: 0.8rem;
   }
 }

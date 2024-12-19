@@ -1,30 +1,193 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <link rel="stylesheet" href="/Styles/styles1.css" />
-    <meta charset="utf-8" />
-    <title>IT PIZZA</title>
-    <style></style>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/Styles/kontakt.css" />
+    <title>Dami Pizza</title>
   </head>
   <body>
     <header>
-      <section class="header-title-line">
-        <img
-        src="/obrazky/logo.gif"
-        alt="logo"
-        title="logo"
-      />
-        <div class="h1"><h1>Dam Pizza</h1></div>
-        <button class="menu-button">
-          <div class="menu-icon"></div>
-        </button>
-      </section>
-      <nav>
+      <div class="header-title-line">
+        <div class="header-content">
+          <div class="logo">
+            <img src="/obrazky/logo.png" alt="logo" title="Dami Pizza" />
+          </div>
+          <div class="h1">
+            <h1>Dami Pizza</h1>
+          </div>
+        </div>
+        <div class="button">
+          <button class="menu-button">
+            <div class="menu-icon"></div>
+          </button>
+        </div>
+      </div>
+      <nav class="mobile">
         <ul>
-          <li><a href="/HTML/IT Pizza.html">Ponuka</a></li>
-          <li><a href="#akcia">Akcia</a></li>
-          <li><a href="#foto">Fotogaléria</a></li>
-          <li><a href="#media">Sociálne siete</a></li>
+          <li><a href="/index.html">Úvod</a></li>
+          <li><a href="/HTML/index.html">Ponuka</a></li>
+          <li><a href="#foto">Sociálne siete</a></li>
+          <li><a href="/HTML/kontakt.html">Kontakt</a></li>
         </ul>
       </nav>
     </header>
+
+    <main>
+      <h2>Kontakt</h2>
+      <div class="text-image-container">
+        <div class="image"><img src="/obrazky/who.png" /></div>
+
+        <div class="text">
+          <h3>My sme Dami Pizza</h3>
+          <div class="riadok">
+            <p><span>Prevádzka: </span>Soblahovská 15, 911 01 Trenčín</p>
+          </div>
+          <div class="riadok">
+            <p><span>Tel.: </span>+421 940 649 202</p>
+          </div>
+          <div class="riadok">
+            <p>
+              <span>Email: </span
+              ><a href="mailto:dam.pitek@gmail.com">dam.pitek@gmail.com</a>
+            </p>
+          </div>
+          <div class="riadok">
+            <p>
+              <span>Sledujte nás:</span>
+            </p>
+            <a href="https://www.instagram.com/damianpitek/">
+              <img src="/obrazky/IG.png" alt=""
+            /></a>
+            <a href="https://www.linkedin.com/in/damian-pitek/">
+              <img src="/obrazky/linkedin.png" alt=""
+            /></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="udaje-container">
+        <div class="faktura-udaje">
+          <h3>Fakturačné údaje</h3>
+          <p><span>Dami Pizza s.r.o.</span></p>
+          <p>Brezová 2, 921 77 Piešťany</p>
+          <div class="ico-dic-container">
+            <div class="ico">
+              <p><span>IČO: </span>47 324 929</p>
+            </div>
+            <div class="dic">
+              <p><span>DIČ: </span>202 380 0526</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="otvaracie-h">
+          <h3>Otváracie hodiny</h3>
+          <p><span>Po - Pi: </span>10:00 - 20:00 hod.</p>
+          <p><span>So - Ne: </span>Zatvorené</p>
+          <p><span>Sviatky: </span>Zatvorené</p>
+          <p><span class="italic">Obedjnávky prijímame najneskôr do 19:30 hod.!</span></p>
+        </div>
+      </div>
+    </main>
+
+    <section>
+ 
+      <div class="forms">
+        <h3>Napíšte nám...</h3>
+        <form action="index.php" method="post" enctype="multipart/form-data">
+          <div class="rozlozenie">
+            <div class="username">
+              <label for="username">*Kontaktná osoba: </label>
+              <input
+                type="text"
+                id="username"
+                placeholder="Meno + Priezvisko"
+                required
+              />
+            </div>
+            <div class="email">
+              <label for="email">*Email: </label>
+              <input
+                type="email"
+                id="email"
+                placeholder="example@example.com"
+                required
+              />
+            </div>
+          </div>
+
+          <br />
+          <div class="num">
+            <label for="tnum">Telefón:</label>
+            <input
+              type="tel"
+              id="tnum"
+              placeholder="+421-123-456-789"
+              minlength="13"
+              maxlength="13"
+              />
+          </div>
+          <br />
+          <div class="message">
+            <label for="poznamka">*Správa pre nás: </label>
+            <textarea
+              name="poznamka"
+              id="poznamka"
+              rows="10"
+              cols="25"
+            ></textarea>
+            <br />
+          </div>
+
+          <label for="newsletter"
+            >Súhlasím so spracovaním osobných <span>údajov podľa GDPR.</span>
+          </label>
+          <input type="checkbox" id="newsletter" required /> <br />
+
+          <input type="submit" />
+          <input type="reset" />
+        </form>
+      </div>
+    </section>
+    <footer>
+      <div class="footer-container">
+        <div class="footer" id="address">
+          <img src="/obrazky/bod.png" />
+          <p>28.októbra , 911 01 Trenčín</p>
+        </div>
+        <div class="footer" id="mail">
+          <a href="mailto:dam.pitek@gmail.com"
+            ><img src="/obrazky/mail.png"
+          /></a>
+          <p>dam.pitek@gmail.com</p>
+        </div>
+        <div class="footer" id="phone">
+          <img src="/obrazky/phone.png" />
+          <p>+421 940 649 202</p>
+        </div>
+        <div class="footer">
+          <div class="socials">
+            <div class="instagram">
+              <a href="https://www.instagram.com/damianpitek/"
+                ><img src="/obrazky/IG.png" alt="Instagram" title="Instagram"
+              /></a>
+            </div>
+            <div class="linkedin">
+              <a href="https://www.linkedin.com/in/damian-pitek/"
+                ><img
+                  src="/obrazky/linkedin.png"
+                  alt="LinkedIn"
+                  title="LinkedIn"
+              /></a>
+            </div>
+          </div>
+          <p>
+            Autor: Damián Pitek <br />
+            &copy; All rights reserved <br />
+          </p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

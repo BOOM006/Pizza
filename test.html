@@ -1,38 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/text.css" />
-    <title>Document</title>
-  </head>
-  <body>
-    <header>
-      <div class="header-title-line">
-        <!-- Skupina pre logo a názov + tlačidlo -->
-        <div class="header-content">
-          <div class="logo">
-            <img src="/obrazky/logo.png" alt="logo" title="logo" />
-          </div>
-          <div class="h1">
-            <h1>Dam Pizza</h1>
-          </div>
-          <div class="button">
-            <button class="menu-button">
-              <div class="menu-icon"></div>
-            </button>
-          </div>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>Menu Toggle</title>
+</head>
+<body>
+  <header>
+    <div class="header-title-line">
+      <div class="header-content">
+        <div class="logo">
+          <img src="/obrazky/logo.png" alt="logo" title="logo" />
+        </div>
+        <div class="h1">
+          <h1>Dami Pizza</h1>
         </div>
       </div>
-      <!-- Navigácia -->
-      <nav class="mobile">
-        <ul>
-          <li><a href="/index.html">Úvod</a></li>
-          <li><a href="/HTML/index.html">Ponuka</a></li>
-          <li><a href="#foto">Sociálne siete</a></li>
-          <li><a href="/HTML/kontakt.html">Kontakt</a></li>
-        </ul>
-      </nav>
-    </header>
-  </body>
+      <div class="button">
+        <!-- Skrytý checkbox pre ovládanie navigácie -->
+        <input type="checkbox" id="menu-toggle" />
+        <label for="menu-toggle" class="menu-button">
+          <div class="menu-icon"></div>
+        </label>
+      </div>
+    </div>
+    <!-- Navigácia bude skrytá a zobrazí sa po kliknutí na tlačidlo -->
+    <nav id="mobile-nav">
+      <ul>
+        <li><a href="/index.html">Úvod</a></li>
+        <li><a href="/HTML/index.html">Ponuka</a></li>
+        <li><a href="#foto">Sociálne siete</a></li>
+        <li><a href="/HTML/kontakt.html">Kontakt</a></li>
+      </ul>
+    </nav>
+  </header>
+</body>
 </html>

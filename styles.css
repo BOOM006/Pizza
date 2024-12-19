@@ -4,18 +4,18 @@
   --HEADER-COLOR: whitesmoke;
   --GRADIENT-COLOR: rgb(246, 217, 217);
   --BGCOLOR: #e59885;
-  --TABLE-BGCOLOR: hsla(0, 0%, 100%, 0.711);
+  --TABLE-BGCOLOR: rgba(255, 255, 255, 0.711);
+  --FOOTER-BGCOLOR: rgb(194, 186, 186);
 
   /*FONTS*/
   --FF: "Times New Roman";
   --FS-TEXT: clamp(1rem, 1.8vw, 5rem); /*Texty - a, p*/
-  --FS-H1: clamp(2rem, 3vw, 6rem); /*Nadpis h1*/
+  --FS-H1: clamp(2rem, 2.5vw, 6rem); /*Nadpis h1*/
   --FS-H2: clamp(1.8rem, 2.5vw, 6rem); /*Nadpis h2*/
   --FS-H3: clamp(1.5rem, 2.2vw, 5.8rem); /*Nadpis h3*/
 }
 
 body {
-  font-size: var(--FS-TEXT);
   min-height: 100vh;
   display: flex;
   flex-flow: column nowrap;
@@ -23,9 +23,11 @@ body {
   font-family: "Times New Roman";
   background-image: url("/obrazky/Pizza.jpg"),
     linear-gradient(to left, var(--GRADIENT-COLOR), var(--BGCOLOR));
-  background-repeat: round;
+  background-repeat: no-repeat;
   background-size: 100%;
   background-position: center;
+  font-size: var(--FS-TEXT);
+  background-repeat: round;
 }
 
 body img {
@@ -102,17 +104,13 @@ header {
 .menu-icon,
 .menu-icon::before,
 .menu-icon::after {
+  content: "";
   background-color: var(--HEADER-BGCOLOR);
   width: 40px;
   height: 5px;
   border-radius: 5px;
   position: absolute;
   transition: all 0.5s;
-}
-
-.menu-icon::before,
-.menu-icon::after {
-  content: "";
 }
 
 .menu-icon::before {
@@ -140,7 +138,7 @@ header {
   display: block;
 }
 :is(header:hover, header:focus-within) + main {
-  margin-top: calc(6rem + 300px); /* Posun gridu o výšku navigácie */
+  margin-top: calc(6rem + 24px); /* Posun gridu o výšku navigácie */
   transition: margin-top 0.3s ease-in-out;
 }
 nav {
@@ -165,13 +163,16 @@ nav {
 nav ul {
   list-style-type: none;
   display: flex;
-  flex-flow: column nowrap;
+  flex-flow: row;
   padding: 0;
+  margin: 0 auto;
+  justify-content: center;
+  gap: 5rem;
+  border-top: 1px solid var(--HEADER-COLOR);
 }
 
 nav li {
   padding: 1.5rem;
-  border-top: 1px solid var(--HEADER-COLOR);
 }
 
 nav a {
@@ -227,13 +228,14 @@ nav a:focus {
 }
 
 .offer-section {
-  margin-top: 10rem;
+  margin-top: 14rem;
   text-align: center;
   width: 95%;
   justify-self: center;
   justify-items: center;
   justify-content: space-between;
   background-color: var(--TABLE-BGCOLOR);
+  border-radius: 3rem;
 }
 
 .offer-section h2 {
@@ -249,6 +251,7 @@ nav a:focus {
   width: 95%;
   background-color: var(--TABLE-BGCOLOR);
   justify-self: center;
+  border-radius: 3rem;
 }
 
 .image {
@@ -261,6 +264,7 @@ nav a:focus {
 
 .text span {
   display: block;
+  padding-bottom: 1rem;
 }
 
 .gallery-container {
@@ -271,6 +275,7 @@ nav a:focus {
   background-color: var(--TABLE-BGCOLOR);
   margin-top: 1rem;
   padding-top: 1rem;
+  border-radius: 3rem;
 }
 
 .gallery {
@@ -284,7 +289,7 @@ nav a:focus {
 
 .footer-container {
   margin-top: 1rem;
-  background-color: var(--HEADER-BGCOLOR);
+  background-color: var(--FOOTER-BGCOLOR);
   display: flex;
   justify-content: space-around;
   justify-items: center;
@@ -302,13 +307,15 @@ nav a:focus {
 }
 
 .footer img {
-  width: 10vw;
+  width: 70px;
   display: flex;
   justify-self: center;
+  padding-top: 1rem;
 }
 
 .footer p {
   text-align: center;
+  margin-bottom: 0;
 }
 
 .socials {
@@ -347,7 +354,15 @@ nav a:focus {
 
   nav ul {
     margin-bottom: 0rem;
+    flex-direction: column;
+    gap: 0rem;
   }
+  
+  nav li {
+    padding: 1rem;
+  }
+  
+
 
   .menu-button,
   .menu-icon {
@@ -422,16 +437,8 @@ nav a:focus {
     flex-direction: column;
   }
 
-  .footer-container {
-    flex-direction: column;
-  }
-
   .footer {
     width: 100%;
     margin: auto;
-  }
-
-  .footer :first-child {
-    padding-top: 0.8rem;
   }
 }

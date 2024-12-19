@@ -9,13 +9,12 @@
   /*FONTS*/
   --FF: "Times New Roman";
   --FS-TEXT: clamp(1rem, 1.8vw, 5rem); /*Texty - a, p*/
-  --FS-H1: clamp(2rem, 3vw, 6rem); /*Nadpis h1*/
+  --FS-H1: clamp(2rem, 2.5vw, 6rem); /*Nadpis h1*/
   --FS-H2: clamp(1.8rem, 2.5vw, 6rem); /*Nadpis h2*/
   --FS-H3: clamp(1.5rem, 2.2vw, 5.8rem); /*Nadpis h3*/
 }
 
 body {
-  font-size: var(--FS-TEXT);
   min-height: 100vh;
   display: flex;
   flex-flow: column nowrap;
@@ -23,9 +22,11 @@ body {
   font-family: "Times New Roman";
   background-image: url("/obrazky/Pizza.jpg"),
     linear-gradient(to left, var(--GRADIENT-COLOR), var(--BGCOLOR));
-  background-repeat: round;
+  background-repeat: no-repeat;
   background-size: 100%;
   background-position: center;
+  font-size: var(--FS-TEXT);
+  background-repeat: round;
 }
 
 body img {
@@ -35,15 +36,29 @@ body img {
 header {
   background-color: var(--HEADER-BGCOLOR);
   color: var(--HEADER-COLOR);
-  /*background-image: url(/obrazky/Pizza.jpg);*/
   margin-bottom: 3rem;
+  position: fixed;
+  top: 0;
+  width: 100%; /* Šírka cez celú obrazovku */
+  z-index: 1000; /* Zabezpečí, že header bude nad ostatným obsahom */
+  margin-bottom: 0; /* Zruší spodný margin */
 }
 
 .header-title-line {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  align-items: center;
+}
+
+.header-content {
+  display: flex;
+  gap: 5rem;
+  margin: auto;
+  width: 66%;
+}
+
+.header-content :last-child {
   text-align: center;
-  max-height: min-content;
 }
 
 .logo {
@@ -62,7 +77,7 @@ header {
   display: flex;
   margin: auto;
   justify-content: center;
-  width: 25%;
+  width: 10%;
 }
 
 .button button {
@@ -70,7 +85,7 @@ header {
 }
 
 .h1 {
-  width: 50%;
+  width: 70%;
   font-size: var(--FS-H1);
 }
 
@@ -88,17 +103,13 @@ header {
 .menu-icon,
 .menu-icon::before,
 .menu-icon::after {
+  content: "";
   background-color: var(--HEADER-BGCOLOR);
   width: 40px;
   height: 5px;
   border-radius: 5px;
   position: absolute;
   transition: all 0.5s;
-}
-
-.menu-icon::before,
-.menu-icon::after {
-  content: "";
 }
 
 .menu-icon::before {
@@ -125,7 +136,10 @@ header {
 :is(header:hover, header:focus-within) nav {
   display: block;
 }
-
+:is(header:hover, header:focus-within) + main {
+  margin-top: calc(6rem + 24px); /* Posun gridu o výšku navigácie */
+  transition: margin-top 0.3s ease-in-out;
+}
 nav {
   background-color: hsla(0, 0%, 20%, 0.384);
   display: none;
@@ -148,13 +162,16 @@ nav {
 nav ul {
   list-style-type: none;
   display: flex;
-  flex-flow: column nowrap;
+  flex-flow: row;
   padding: 0;
+  margin: 0 auto;
+  justify-content: center;
+  gap: 5rem;
+  border-top: 1px solid var(--HEADER-COLOR);
 }
 
 nav li {
   padding: 1.5rem;
-  border-top: 1px solid var(--HEADER-COLOR);
 }
 
 nav a {
@@ -179,7 +196,7 @@ nav a:focus {
 
 h2 {
   font-size: var(--FS-H2);
-  margin: auto;
+  margin: 16rem auto;
   text-align: center;
   background-color: lightsalmon;
   width: 30%;
