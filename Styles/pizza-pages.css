@@ -5,6 +5,7 @@
   --GRADIENT-COLOR: rgb(246, 217, 217);
   --BGCOLOR: #e59885;
   --TABLE-BGCOLOR: hsla(0, 0%, 100%, 0.711);
+  --FOOTER-BGCOLOR: rgb(194, 186, 186);
 
   /*FONTS*/
   --FF: "Times New Roman";
@@ -196,7 +197,7 @@ nav a:focus {
 
 h2 {
   font-size: var(--FS-H2);
-  margin: 16rem auto;
+  margin: 12rem auto;
   text-align: center;
   background-color: lightsalmon;
   width: 30%;
@@ -208,6 +209,7 @@ h2 {
 
 #info {
   background-color: var(--TABLE-BGCOLOR);
+  border-radius: 3rem;
   width: 95%;
   margin: auto;
   display: flex;
@@ -291,7 +293,7 @@ td {
 
 .footer-container {
   margin-top: 1rem;
-  background-color: var(--HEADER-BGCOLOR);
+  background-color: var(--FOOTER-BGCOLOR);
   display: flex;
   justify-content: space-around;
   justify-items: center;
@@ -309,13 +311,15 @@ td {
 }
 
 .footer img {
-  width: 10vw;
+  width: 70px;
   display: flex;
   justify-self: center;
+  padding-top: 1rem;
 }
 
 .footer p {
   text-align: center;
+  margin-bottom: 0;
 }
 
 .socials {
@@ -324,21 +328,53 @@ td {
 }
 
 @media (max-width: 768px) {
-  .header-title-line {
-    flex-direction: column;
+  header {
+    position: relative;
   }
 
-  .h1 {
-    margin: auto;
+  .header-title-line {
+    gap: 0;
+    justify-content: center; /* Zarovná všetko v rámci tohto kontajnera */
+  }
+
+  .header-content {
+    gap: 0rem;
+    flex-direction: column;
+    align-items: center; /* Zarovná všetky deti do stredu */
+    justify-content: center; /* Zarovná ich aj vertikálne */
+    width: 100%; /* Šírka pre celý dostupný priestor */
+  }
+
+  .button {
+    display: none;
+  }
+
+  .h1 h1 {
+    margin-bottom: 0rem;
+    margin: 0; /* Zruší predchádzajúce nastavenie marginov */
+    text-align: center; /* Explicitné centrovanie textu */
+    width: 100%; /* Zabezpečí, že text sa zarovná na stred šírky rodiča */
+  }
+
+  nav ul {
+    margin-bottom: 0rem;
+    flex-direction: column;
+    gap: 0rem;
+  }
+
+  nav li {
+    padding: 1rem;
   }
 
   .menu-button,
   .menu-icon {
     display: none;
+    width: 0px;
   }
 
-  header {
-    position: relative;
+  .menu-button,
+  .menu-icon {
+    display: none;
   }
 
   nav {
@@ -347,6 +383,16 @@ td {
     transform: scaleY(
       1
     ); /* Zabezpečíme, že menu bude okamžite plne zobrazené */
+  }
+
+  :is(header:hover, header:focus-within) + main {
+    margin-top: calc(0rem + 0px); /* Posun gridu o výšku navigácie */
+  }
+
+  h2 {
+    margin-top: 0rem;
+    margin: 1rem auto;
+    width: 50%;
   }
 
   .main-container {
@@ -369,5 +415,14 @@ td {
   }
   .payment-container {
     width: 100%;
+  }
+
+  .footer-container {
+    flex-direction: column;
+  }
+
+  .footer {
+    width: 100%;
+    margin: auto;
   }
 }
