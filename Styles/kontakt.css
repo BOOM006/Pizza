@@ -251,6 +251,7 @@ span {
 
 .italic {
   font-style: italic;
+  background-color: yellow;
 }
 
 .ico-dic-container {
