@@ -195,6 +195,37 @@ nav a:focus {
   transition: all 0.3s;
 }
 
+.nav-ponuka {
+  display: flex;
+}
+
+.nav-ponuka a {
+  text-decoration: none;
+}
+
+.nav-ponuka :hover {
+  background-color: grey;
+}
+
+.drink {
+  width: 50%;
+  border-right: 3px solid var(--HEADER-BGCOLOR);
+}
+
+.coffee {
+  width: 50%;
+}
+
+.nav-ponuka-container {
+  margin-top: 13rem;
+  text-align: center;
+  width: 95%;
+  justify-self: center;
+  justify-content: space-between;
+  background-color: var(--TABLE-BGCOLOR);
+  border-radius: 3rem;
+}
+
 .offer-grid {
   display: grid;
   width: 90%;
@@ -202,7 +233,7 @@ nav a:focus {
   justify-content: space-between;
   grid-template-columns: repeat(auto-fill, minmax(30%, 1fr));
   margin: auto;
-  margin-top: 14rem;
+  margin: 2rem auto;
 }
 
 .offer {
@@ -239,7 +270,6 @@ nav a:focus {
 }
 
 .footer-container {
-  margin-top: 1rem;
   background-color: var(--FOOTER-BGCOLOR);
   display: flex;
   justify-content: space-around;
@@ -262,13 +292,11 @@ nav a:focus {
   display: flex;
   justify-self: center;
   padding-top: 1rem;
-
 }
 
 .footer p {
   text-align: center;
   margin-bottom: 0;
-
 }
 
 .socials {
@@ -338,6 +366,9 @@ nav a:focus {
     margin-top: calc(0rem + 0px); /* Posun gridu o výšku navigácie */
   }
 
+  .nav-ponuka-container {
+    margin-top: 1rem;
+  }
   .offer-grid {
     grid-template-columns: repeat(auto-fill, minmax(50%, 1fr)); /* 2 stĺpce */
     margin-top: 1rem;

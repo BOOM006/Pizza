@@ -6,6 +6,8 @@
   --BGCOLOR: #e59885;
   --TABLE-BGCOLOR: hsla(0, 0%, 100%, 0.711);
   --NAPOJ-BGCOLOR: hsla(0, 0%, 50%, 0.738);
+  --FOOTER-BGCOLOR: rgb(194, 186, 186);
+
 
   /*FONTS*/
   --FF: "Times New Roman";
@@ -195,15 +197,42 @@ nav a:focus {
   transition: all 0.3s;
 }
 
-main {
+.nav-ponuka {
+  display: flex;
+}
+
+.nav-ponuka a {
+  text-decoration: none;
+}
+
+.nav-ponuka :hover {
+  background-color: grey;
+}
+
+.pizza {
+  width: 50%;
+  border-right: 3px solid var(--HEADER-BGCOLOR);
+}
+
+.coffee {
+  width: 50%;
+}
+
+.nav-ponuka-container {
   margin-top: 13rem;
+  text-align: center;
+  width: 95%;
+  justify-self: center;
+  justify-content: space-between;
+  background-color: var(--TABLE-BGCOLOR);
+  border-radius: 3rem;
 }
 
 .napoje-container {
   width: 95%;
   display: flex;
   flex-direction: column;
-  margin: auto;
+  margin: 2rem auto;
   background-color: var(--TABLE-BGCOLOR);
   border-radius: 3rem;
   padding-bottom: 2rem;
@@ -221,8 +250,9 @@ main {
 .sytene-grid img,
 .nesytene-grid img,
 .energy-grid img {
-width: 160px;
-height: 160px;}
+  width: 160px;
+  height: 160px;
+}
 
 .h2 {
   padding-top: 2rem;
@@ -237,18 +267,17 @@ height: 160px;}
   padding: 0.5rem;
   width: 80%;
   border: 2px solid #333;
-background-color: var(--TABLE-BGCOLOR);
-border-radius: 3rem;
+  background-color: var(--TABLE-BGCOLOR);
+  border-radius: 3rem;
 }
 
 .image-text {
   display: flex;
-justify-content: center;
+  justify-content: center;
 }
 
 .footer-container {
-  margin-top: 1rem;
-  background-color: var(--HEADER-BGCOLOR);
+  background-color: var(--FOOTER-BGCOLOR);
   display: flex;
   justify-content: space-around;
   justify-items: center;
@@ -316,7 +345,7 @@ justify-content: center;
     flex-direction: column;
     gap: 0rem;
   }
-  
+
   nav li {
     padding: 1rem;
   }
@@ -352,6 +381,14 @@ justify-content: center;
     margin-top: 0.5rem;
   }
 
+  .nav-ponuka-container {
+    margin-top: 0.5rem;
+  }
+
+.napoje-container {
+  margin: 1rem auto;
+}
+
   .sytene-grid,
   .nesytene-grid,
   .energy-grid {
@@ -365,7 +402,7 @@ justify-content: center;
     width: 100px; /* Väčší obrázok na mobil */
   }
 
-  .image-text ul{
+  .image-text ul {
     padding: 0;
   }
 
