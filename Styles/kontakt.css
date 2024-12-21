@@ -7,7 +7,6 @@
   --TABLE-BGCOLOR: hsla(0, 0%, 100%, 0.711);
   --FOOTER-BGCOLOR: rgb(194, 186, 186);
 
-
   /*FONTS*/
   --FF: "Times New Roman";
   --FS-TEXT: clamp(1rem, 1.8vw, 5rem); /*Texty - a, p*/
@@ -198,7 +197,7 @@ nav a:focus {
 
 .text-image-container {
   border-radius: 3rem;
-  margin-top: 8rem;
+  margin-top: 13.5rem;
   display: flex;
   justify-content: space-between;
   width: 95%;
@@ -251,7 +250,7 @@ span {
 }
 
 .italic {
-font-style: italic ;
+  font-style: italic;
 }
 
 .ico-dic-container {
@@ -341,7 +340,6 @@ input {
 .footer p {
   text-align: center;
   margin-bottom: 0;
-
 }
 
 .socials {
@@ -380,6 +378,12 @@ input {
 
   nav ul {
     margin-bottom: 0rem;
+    flex-direction: column;
+    gap: 0rem;
+  }
+
+  nav li {
+    padding: 1rem;
   }
 
   .menu-button,
@@ -426,7 +430,7 @@ input {
   .text-image-container {
     flex-direction: column;
     text-align: center;
-    margin-top: 0.5rem;
+    margin: 1rem 0;
   }
 
   .image {
@@ -439,20 +443,25 @@ input {
     display: block;
   }
 
-  .gallery-container {
+  .udaje-container {
+    width: 95%;
     flex-direction: column;
-    height: auto;
-    padding: 0;
-    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+    gap: 1rem;
   }
 
-  .gallery {
+  .faktura-udaje {
     margin: auto;
-    height: auto;
+    width: 100%;
   }
 
-  .footer-container {
-    flex-direction: column;
+  .otvaracie-h {
+    margin: auto;
+    width: 100%;
+  }
+
+  .forms {
+    width: 95%;
   }
 
   .footer-container {
@@ -462,9 +471,5 @@ input {
   .footer {
     width: 100%;
     margin: auto;
-  }
-
-  .footer :first-child {
-    padding-top: 0.8rem;
   }
 }

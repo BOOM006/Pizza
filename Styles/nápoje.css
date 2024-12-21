@@ -266,13 +266,15 @@ justify-content: center;
 }
 
 .footer img {
-  width: 10vw;
+  width: 70px;
   display: flex;
   justify-self: center;
+  padding-top: 1rem;
 }
 
 .footer p {
   text-align: center;
+  margin-bottom: 0;
 }
 
 .socials {
@@ -311,6 +313,12 @@ justify-content: center;
 
   nav ul {
     margin-bottom: 0rem;
+    flex-direction: column;
+    gap: 0rem;
+  }
+  
+  nav li {
+    padding: 1rem;
   }
 
   .menu-button,
@@ -332,13 +340,33 @@ justify-content: center;
     ); /* Zabezpečíme, že menu bude okamžite plne zobrazené */
   }
 
-  .offer-grid {
-    grid-template-columns: repeat(auto-fill, minmax(50%, 1fr)); /* 2 stĺpce */
-    margin-top: 1rem;
+  :is(header:hover, header:focus-within) + main {
+    margin-top: calc(0rem + 0px); /* Posun gridu o výšku navigácie */
+  }
+
+  h2 {
+    margin-top: 0rem;
+  }
+
+  main {
+    margin-top: 0.5rem;
+  }
+
+  .sytene-grid,
+  .nesytene-grid,
+  .energy-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(100%, 1fr));
+    gap: 0.5rem;
+    justify-items: center;
   }
 
   .image {
     width: 100px; /* Väčší obrázok na mobil */
+  }
+
+  .image-text ul{
+    padding: 0;
   }
 
   .centering {
@@ -352,9 +380,5 @@ justify-content: center;
   .footer {
     width: 100%;
     margin: auto;
-  }
-
-  .footer :first-child {
-    padding-top: 0.8rem;
   }
 }
