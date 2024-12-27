@@ -3,9 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/styles.css" />
-    <link rel="icon" href="/obrazky/logo.png">
-    <title>Dami Pizza</title>
+    <link rel="stylesheet" href="/Styles/pizza-pages.css" />
+    <title>Margherita</title>
   </head>
   <body>
     <header>
@@ -27,7 +26,7 @@
       <nav class="mobile">
         <ul>
           <li><a href="/index.html">Úvod</a></li>
-          <li><a href="/HTML/ponuka.html">Ponuka</a></li>
+          <li><a href="/HTML/index.html">Ponuka</a></li>
           <li><a href="#foto">Sociálne siete</a></li>
           <li><a href="/HTML/kontakt.html">Kontakt</a></li>
         </ul>
@@ -35,71 +34,85 @@
     </header>
 
     <main>
-      <div class="offer-section">
-        <h2>Vaša chuť rozhoduje...</h2>
-        <div class="offer">
-          <div class="pizza">
-            <a href="/HTML/ponuka.html">
-              <img src="/obrazky/meal.png" alt="Jedlo" title="Pizza" />
-              <p>Pizza</p>
-            </a>
+      <h2>Medový rez</h2>
+      <section id="info">
+        <div class="main-container">
+          <div class="image-and-text">
+            <div class="image">
+              <img
+                src="/obrazky/medovy-rez.png"
+                alt="Medový rez"
+                title="Medový rez"
+              />
+            </div>
+
+            <div class="text">
+              <p>
+                Rez z medových plátov plnený lahodnou marmeládou a krémom zdobený čokoládou.
+              </p>
+            </div>
           </div>
-          <div class="drink">
-            <a href="/HTML/nápoje.html">
-              <img src="/obrazky/drink.png" alt="Nápoje" title="Nápoje" />
-              <p>Nápoje</p>
-            </a>
+
+          <div class="table-container">
+            <table>
+              <tr>
+                <th>Zloženie</th>
+                <th>Alergény</th>
+              </tr>
+              <tr>
+                <td>
+                  <ul>
+                    <li>Medové cesto</li>
+                    <li>Maslový krém</li>
+                    <li>Karamelová poleva</li>
+                  </ul>
+                </td>
+                <td>
+                  <ul>
+                    <li>1 – Obilniny obsahujúce lepok (cesto)</li>
+                    <li>3 – Vajcia a výrobky z nich (cesto)</li>
+                    <li>7 – Mlieko a výrobky z neho (krém, poleva)</li>
+                  </ul>
+                </td>
+              </tr>
+            </table>
           </div>
-          <div class="coffee">
-            <a href="/HTML/dezerty.html">
-              <img src="/obrazky/dezert.png" alt="Dezerty" title="Dezerty" />
-              <p>Dezerty</p>
-            </a>
+
+          <div class="payment-container">
+            <div class="payment-button">
+              <a href="/HTML/payment.html">Objednať</a>
+            </div>
           </div>
         </div>
-      </div>
-
-      <div class="text-image-container">
-        <div class="image"><img src="/obrazky/who.png" /></div>
-
-        <div class="text">
-          <h2>My sme Dami Pizza</h2>
-          <p>
-            <span class="zalomenie">Naša pizzeria má korene, ktoré siahajú až do roku 1985. Sme prvá a tá
-            najlepšia pizzeria v meste pod hradom pána Váhu a Tatier!</span>
-            <span class="zalomenie">
-              Od prvého pečenia až dodnes sa sústredime na kvalitu, čerstvosť a
-              spokojnosť zákazníkov.</span
-            >
-            <span class="zalomenie"
-              >Ponúkame pizzu, nápoje aj dezerty, a to s rýchlou donáškou priamo
-              k Vám.</span
-            >
-          </p>
+        <div class="calories">
+          <table>
+            <caption>
+              Kalorické hodnoty a živiny (100 g)
+            </caption>
+            <tr>
+              <th>Energia</th>
+              <td>351 kcal</td>
+            </tr>
+            <tr>
+              <th>Bielkoviny</th>
+              <td>3 g</td>
+            </tr>
+            <tr>
+              <th>Tuky</th>
+              <td>20 g</td>
+            </tr>
+            <tr>
+              <th>Sacharidy</th>
+              <td>39 g</td>
+            </tr>
+            <tr>
+              <th>Soľ</th>
+              <td>0,03 g</td>
+            </tr>
+          </table>
         </div>
-      </div>
+      </section>
     </main>
-    <section>
-      <div class="gallery-container">
-        <div class="gallery">
-          <img
-            src="/obrazky/upečená.png"
-            alt="upečená pizza"
-            title="upečená pizza"
-          />
-        </div>
-        <div class="gallery">
-          <img src="/obrazky/coffee.jpg" alt="Kávička" title="Kávička" />
-        </div>
-        <div class="gallery">
-          <img
-            src="/obrazky/pizza_box.jpg"
-            alt="Pizza so sebou"
-            title="Pizza so sebou"
-          />
-        </div>
-      </div>
-    </section>
 
     <footer>
       <div class="footer-container">
