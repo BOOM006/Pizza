@@ -6,6 +6,7 @@
   --BGCOLOR: #e59885;
   --TABLE-BGCOLOR: hsla(0, 0%, 100%, 0.711);
   --FOOTER-BGCOLOR: rgb(194, 186, 186);
+  --ORDER-BGCOLOR: hsla(120, 82%, 46%, 0.427);
 
   /*FONTS*/
   --FF: "Times New Roman";
@@ -195,25 +196,36 @@ nav a:focus {
   transition: all 0.3s;
 }
 
+.h2-wrapper {
+  background-color: var(--TABLE-BGCOLOR);
+  padding-top: 1em;
+  border-radius: 3rem;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  width: 95%;
+  margin: 12rem auto;
+  margin-bottom: 0;
+}
+
 h2 {
   font-size: var(--FS-H2);
-  margin: 12rem auto;
+  margin: auto;
+  margin-bottom: 0rem;
   text-align: center;
   background-color: lightsalmon;
   width: 30%;
   border-radius: 3rem;
   border: 5px double red;
   outline: lightcoral;
-  margin-bottom: 3rem;
 }
 
 #info {
   background-color: var(--TABLE-BGCOLOR);
-  border-radius: 3rem;
+  border-radius: 0;
+  border-bottom-left-radius: 3rem;
+  border-bottom-right-radius: 3rem;
   width: 95%;
   margin: auto;
-  display: flex;
-  flex-direction: column;
 }
 
 .main-container {
@@ -253,42 +265,56 @@ h2 {
 
 .table-container {
   padding-top: 2rem;
-  width: 33%;
+  width: 46%;
 }
 
-td {
-  padding: 0.5rem;
-  text-align: left;
+.calories {
+  padding-top: 2rem;
+  width: 20%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.calories caption {
+  font-weight: bold;
+  padding-bottom: 2rem;
 }
 
 .payment-container {
   display: flex;
   flex-direction: column-reverse;
+  justify-self: center;
   gap: 1rem;
+  margin-top: 3rem;
+  padding: 0.5rem 0;
+  border-radius: 3rem;
+  background-color: hsla(17, 100%, 74%, 0.531);
+  width: 60%;
+}
+
+.size-container {
+  display: flex;
   justify-content: center;
-  width: 33%;
+  gap: 1rem;
 }
 
 .payment-button {
   text-align: center;
 }
 
-.size {
-  text-align: center;
+.payment-button a {
+  background-color: rgb(219, 101, 101);
+  border-radius: 3rem;
+  text-decoration: none;
+  color: black;
+  padding: 0.4rem;
 }
 
-.calories {
-  padding-bottom: 1rem;
-  display: flex;
-  justify-content: center;
-}
-
-.calories table {
-  width: 70%;
-}
-
-.calories caption {
-  font-weight: bold;
+#platba {
+  font-size: 15px;
+  background-color: hsla(17, 100%, 74%, 1);
+  border: none;
+  border-radius: 0.5rem;
 }
 
 .footer-container {
@@ -325,6 +351,11 @@ td {
 .socials {
   display: flex;
   justify-content: space-around;
+}
+
+span {
+  display: block;
+  text-indent: 2.5rem;
 }
 
 @media (max-width: 768px) {
@@ -389,18 +420,25 @@ td {
     margin-top: calc(0rem + 0px); /* Posun gridu o výšku navigácie */
   }
 
+  .h2-wrapper {
+    padding-top: 1em;
+    margin: 1rem auto;
+    margin-bottom: 0;
+  }
+
   h2 {
     margin-top: 0rem;
-    margin: 1rem auto;
     width: 50%;
   }
 
   .main-container {
     flex-direction: column;
     justify-content: center;
+    padding-bottom: 7rem;
   }
   .image-and-text {
     width: 100%;
+    order: 1;
   }
   .image {
     width: 55%;
@@ -410,11 +448,60 @@ td {
   .image img {
     padding-left: 0;
   }
+
+  .text {
+    padding: 0;
+  }
+
   .table-container {
     width: 100%;
+    order: 2;
+    position: relative; /* Umožní absolutné umiestnenie vnorených prvkov */
+    padding: 0;
   }
-  .payment-container {
+
+  .calories {
     width: 100%;
+    order: 3;
+    padding: 0;
+  }
+
+  .calories caption {
+    text-align: center;
+    padding-bottom: 0.5rem;
+  }
+
+  .calories th,
+  .calories td {
+    padding: 5px;
+    display: inline-block;
+  }
+
+  .calories tbody {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .calories .group1 {
+    flex: 1 1 45%;
+  }
+
+  .calories .group2 {
+    flex: 1 1 45%;
+  }
+
+  .payment-container {
+    position: absolute;
+    top: 175%; /* Umiestni payment-container pod table-container */
+    left: 50%; /* Posunie payment-container do stredu */
+    transform: translateX(-50%); /* Vycentruje payment-container horizontálne */
+    margin-top: 1rem; /* Pridá medzeru medzi tabuľkou a payment-container */
+    width: 95%;
+    padding-bottom: 0.8rem;
+  }
+
+  span {
+    display: inline;
   }
 
   .footer-container {
