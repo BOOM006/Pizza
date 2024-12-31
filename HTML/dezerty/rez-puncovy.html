@@ -4,7 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/Styles/pizza-pages.css" />
-    <title>Margherita</title>
+    <link rel="icon" href="/obrazky/logo.png" />
+    <title>Punčový rez</title>
   </head>
   <body>
     <header>
@@ -25,16 +26,19 @@
       </div>
       <nav class="mobile">
         <ul>
-          <li><a href="/index.html">Úvod</a></li>
-          <li><a href="/HTML/index.html">Ponuka</a></li>
+          <li><a href="/HTML/index.html">Úvod</a></li>
+          <li><a href="/HTML/dezerty.html">Ponuka</a></li>
           <li><a href="#foto">Sociálne siete</a></li>
           <li><a href="/HTML/kontakt.html">Kontakt</a></li>
+          >
         </ul>
       </nav>
     </header>
 
     <main>
-      <h2>Punčový rez</h2>
+      <div class="h2-wrapper">
+        <h2>Punčový rez</h2>
+      </div>
       <section id="info">
         <div class="main-container">
           <div class="image-and-text">
@@ -72,47 +76,52 @@
                 </td>
                 <td>
                   <ul>
-                    <li>1 – Obilniny obsahujúce lepok (cesto)</li>
-                    <li>3 – Vajcia a výrobky z nich (cesto)</li>
-                    <li>7 – Mlieko a výrobky z neho (mozzarella)</li>
+                    <li>1 – Obilniny obsahujúce <span>lepok (cesto)</span></li>
+                    <li>3 – Vajcia a výrobky <span>z nich (cesto)</span></li>
+                    <li>
+                      7 – Mlieko a výrobky <span> z neho (mozzarella)</span>
+                    </li>
                   </ul>
                 </td>
               </tr>
             </table>
-          </div>
 
-          <div class="payment-container">
-            <div class="payment-button">
-              <a href="/HTML/payment.html">Objednať</a>
+            <div class="payment-container">
+              <div class="payment-button">
+                <a href="/HTML/payment.html">Objednať</a>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="calories">
-          <table>
-            <caption>
-              Kalorické hodnoty a živiny (100 g)
-            </caption>
-            <tr>
-              <th>Energia</th>
-              <td>220 kcal</td>
-            </tr>
-            <tr>
-              <th>Bielkoviny</th>
-              <td>4,7 g</td>
-            </tr>
-            <tr>
-              <th>Tuky</th>
-              <td>2,9 g</td>
-            </tr>
-            <tr>
-              <th>Sacharidy</th>
-              <td>44 g</td>
-            </tr>
-            <tr>
-              <th>Soľ</th>
-              <td>0,08 g</td>
-            </tr>
-          </table>
+
+          <div class="calories">
+            <table>
+              <caption>
+                Kalorické hodnoty a živiny (100 g)
+              </caption>
+              <tbody>
+                <tr class="group1">
+                  <th>Energia</th>
+                  <td>220 kcal</td>
+                </tr>
+                <tr class="group1">
+                  <th>Bielkoviny</th>
+                  <td>4,7 g</td>
+                </tr>
+                <tr class="group1">
+                  <th>Tuky</th>
+                  <td>2,9 g</td>
+                </tr>
+                <tr class="group2">
+                  <th>Sacharidy</th>
+                  <td>44 g</td>
+                </tr>
+                <tr class="group2">
+                  <th>Soľ</th>
+                  <td>0,08 g</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
         </div>
       </section>
     </main>

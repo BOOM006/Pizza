@@ -139,7 +139,7 @@ header {
   display: block;
 }
 :is(header:hover, header:focus-within) + main {
-  margin-top: calc(6rem + 24px); /* Posun gridu o výšku navigácie */
+  margin-top: calc(19rem + 24px); /* Posun gridu o výšku navigácie */
   transition: margin-top 0.3s ease-in-out;
 }
 nav {
@@ -194,6 +194,23 @@ nav a:hover,
 nav a:focus {
   transform: scale(1.2);
   transition: all 0.3s;
+}
+
+.nav-ponuka {
+  display: flex;
+}
+
+.nav-ponuka a {
+  text-decoration: none;
+}
+
+.nav-ponuka :hover {
+  background-color: grey;
+}
+
+:is(header:hover, header:focus-within) + main {
+  margin-top: calc(6rem + 24px); /* Posun gridu o výšku navigácie */
+  transition: margin-top 0.3s ease-in-out;
 }
 
 .h2-wrapper {
@@ -264,44 +281,38 @@ h2 {
   text-align: center;
 }
 
-.table-container {
-  padding-top: 2rem;
-  width: 46%;
+.calories-payment-container {
+  display: flex;
+  justify-content: space-between;
+  width: 67%;
+  margin-top: 4rem;
 }
 
 .calories {
-  padding-top: 2rem;
-  width: 20%;
-  margin: 0 auto;
-  text-align: center;
+  width: 50%;
+  justify-items: center;
 }
 
 .calories caption {
   font-weight: bold;
-  padding-bottom: 2rem;
-}
-
-.payment-container {
-  display: flex;
-  flex-direction: column-reverse;
-  justify-self: center;
-  gap: 1rem;
-  margin-top: 3rem;
-  padding: 0.5rem 0;
-  padding-bottom: 0.8rem;
-  border-radius: 3rem;
-  background-color: hsla(17, 100%, 74%, 0.531);
-  width: 60%;
-}
-
-.size-container {
-  display: flex;
-  justify-content: center;
-  gap: 1rem;
+  margin-bottom: 1.5rem;
 }
 
 .payment-button {
   text-align: center;
+  width: 50%;
+  margin-top: 4rem;
+}
+
+ul {
+  display: flex;
+  padding: 0;
+  justify-content: center;
+  gap: 5rem;
+}
+
+.next-line {
+  display: block;
 }
 
 .payment-button a {
@@ -356,8 +367,7 @@ h2 {
 }
 
 span {
-  display: block;
-  text-indent: 2.5rem;
+  font-weight: bold;
 }
 
 @media (max-width: 768px) {
@@ -436,11 +446,9 @@ span {
   .main-container {
     flex-direction: column;
     justify-content: center;
-    padding-bottom: 7rem;
   }
   .image-and-text {
     width: 100%;
-    order: 1;
   }
   .image {
     width: 55%;
@@ -453,54 +461,31 @@ span {
 
   .text {
     padding: 0;
-  }
-
-  .table-container {
-    width: 100%;
-    order: 2;
-    position: relative; /* Umožní absolutné umiestnenie vnorených prvkov */
-    padding: 0;
+    width: 95%;
+    margin: auto;
   }
 
   .calories {
     width: 100%;
-    order: 3;
     padding: 0;
   }
 
   .calories caption {
     text-align: center;
-    padding-bottom: 0.5rem;
+    margin-bottom: 1rem;
   }
 
-  .calories th,
-  .calories td {
-    padding: 5px;
-    display: inline-block;
-  }
+.calories-payment-container {
+    margin: 0 auto;
+    width: 100%;
+    flex-direction: column;
+}
 
-  .calories tbody {
-    display: flex;
-    flex-wrap: wrap;
-  }
-
-  .calories .group1 {
-    flex: 1 1 45%;
-  }
-
-  .calories .group2 {
-    flex: 1 1 45%;
-  }
-
-  .payment-container {
-    position: absolute;
-    top: 175%; /* Umiestni payment-container pod table-container */
-    left: 50%; /* Posunie payment-container do stredu */
-    transform: translateX(-50%); /* Vycentruje payment-container horizontálne */
-    margin-top: 1rem; /* Pridá medzeru medzi tabuľkou a payment-container */
-    width: 95%;
-    padding-bottom: 0.8rem;
-  }
+.payment-button {
+    width: 100%;
+    padding: 0;
+    margin-top: 0;
+}
 
   span {
     display: inline;

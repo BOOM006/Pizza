@@ -4,7 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/Styles/pizza-pages.css" />
-    <title>Margherita</title>
+    <link rel="icon" href="/obrazky/logo.png" />
+    <title>Jahodový cheesecake</title>
   </head>
   <body>
     <header>
@@ -25,22 +26,25 @@
       </div>
       <nav class="mobile">
         <ul>
-          <li><a href="/index.html">Úvod</a></li>
-          <li><a href="/HTML/index.html">Ponuka</a></li>
+          <li><a href="/HTML/index.html">Úvod</a></li>
+          <li><a href="/HTML/dezerty.html">Ponuka</a></li>
           <li><a href="#foto">Sociálne siete</a></li>
           <li><a href="/HTML/kontakt.html">Kontakt</a></li>
+          
         </ul>
       </nav>
     </header>
 
     <main>
-      <h2>Jahodový cheesecake</h2>
+      <div class="h2-wrapper">
+        <h2>Jahodový cheesecake</h2>
+      </div>
       <section id="info">
         <div class="main-container">
           <div class="image-and-text">
             <div class="image">
               <img
-                src="/obrazky//cheesecake.png"
+                src="/obrazky/cheesecake.png"
                 alt="Jahodový cheesecake"
                 title="Jahodový cheesecake"
               />
@@ -48,7 +52,8 @@
 
             <div class="text">
               <p>
-                Krémový cheesecake s tvarohovou plnkou a sviežou jahodovou polevou na chrumkavom sušienkovom základe.
+                Krémový cheesecake s tvarohovou plnkou a sviežou jahodovou
+                polevou na chrumkavom sušienkovom základe.
               </p>
             </div>
           </div>
@@ -69,89 +74,94 @@
                 </td>
                 <td>
                   <ul>
-                    <li>1 – Obilniny obsahujúce lepok (sušienky)</li>
-                    <li>3 – Vajcia a výrobky z nich (plnka)</li>
-                    <li>7 – Mlieko a výrobky z neho (plnka)</li>
+                    <li>
+                      1 – Obilniny obsahujúce<span>lepok (sušienky)</span>
+                    </li>
+                    <li>3 – Vajcia a výrobky <span>z nich (plnka)</span></li>
+                    <li>7 – Mlieko a výrobky <span>z neho (plnka)</span></li>
                   </ul>
                 </td>
               </tr>
             </table>
-          </div>
 
-          <div class="payment-container">
-            <div class="payment-button">
-              <a href="/HTML/payment.html">Objednať</a>
+            <div class="payment-container">
+              <div class="payment-button">
+                <a href="/HTML/payment.html">Objednať</a>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="calories">
-          <table>
-            <caption>
-              Kalorické hodnoty a živiny (100 g)
-            </caption>
-            <tr>
-              <th>Energia</th>
-              <td>250 kcal</td>
-            </tr>
-            <tr>
-              <th>Bielkoviny</th>
-              <td>5 g</td>
-            </tr>
-            <tr>
-              <th>Tuky</th>
-              <td>15 g</td>
-            </tr>
-            <tr>
-              <th>Sacharidy</th>
-              <td>22 g</td>
-            </tr>
-            <tr>
-              <th>Soľ</th>
-              <td>0,2 g</td>
-            </tr>
-          </table>
+
+          <div class="calories">
+            <table>
+              <caption>
+                Kalorické hodnoty a živiny (100 g)
+              </caption>
+              <tbody>
+                <tr class="group1">
+                  <th>Energia</th>
+                  <td>250 kcal</td>
+                </tr>
+                <tr class="group1">
+                  <th>Bielkoviny</th>
+                  <td>5 g</td>
+                </tr>
+                <tr class="group1">
+                  <th>Tuky</th>
+                  <td>15 g</td>
+                </tr>
+                <tr class="group2">
+                  <th>Sacharidy</th>
+                  <td>22 g</td>
+                </tr>
+                <tr class="group2">
+                  <th>Soľ</th>
+                  <td>0,2 g</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
         </div>
       </section>
     </main>
 
     <footer>
-        <div class="footer-container">
-          <div class="footer" id="address">
-            <img src="/obrazky/bod.png" />
-            <p>Soblahovská 15, 911 01 Trenčín</p>
-          </div>
-          <div class="footer" id="mail">
-            <a href="mailto:dam.pitek@gmail.com"
-              ><img src="/obrazky/mail.png"
-            /></a>
-            <p>dam.pitek@gmail.com</p>
-          </div>
-          <div class="footer" id="phone">
-            <img src="/obrazky/phone.png" />
-            <p>+421 940 649 202</p>
-          </div>
-          <div class="footer">
-            <div class="socials">
-              <div class="instagram">
-                <a href="https://www.instagram.com/damianpitek/"
-                  ><img src="/obrazky/IG.png" alt="Instagram" title="Instagram"
-                /></a>
-              </div>
-              <div class="linkedin">
-                <a href="https://www.linkedin.com/in/damian-pitek/"
-                  ><img
-                    src="/obrazky/linkedin.png"
-                    alt="LinkedIn"
-                    title="LinkedIn"
-                /></a>
-              </div>
-            </div>
-            <p>
-              Autor: Damián Pitek <br />
-              &copy; All rights reserved <br />
-            </p>
-          </div>
+      <div class="footer-container">
+        <div class="footer" id="address">
+          <img src="/obrazky/bod.png" />
+          <p>Soblahovská 15, 911 01 Trenčín</p>
         </div>
-      </footer>
+        <div class="footer" id="mail">
+          <a href="mailto:dam.pitek@gmail.com"
+            ><img src="/obrazky/mail.png"
+          /></a>
+          <p>dam.pitek@gmail.com</p>
+        </div>
+        <div class="footer" id="phone">
+          <img src="/obrazky/phone.png" />
+          <p>+421 940 649 202</p>
+        </div>
+        <div class="footer">
+          <div class="socials">
+            <div class="instagram">
+              <a href="https://www.instagram.com/damianpitek/"
+                ><img src="/obrazky/IG.png" alt="Instagram" title="Instagram"
+              /></a>
+            </div>
+            <div class="linkedin">
+              <a href="https://www.linkedin.com/in/damian-pitek/"
+                ><img
+                  src="/obrazky/linkedin.png"
+                  alt="LinkedIn"
+                  title="LinkedIn"
+              /></a>
+            </div>
+          </div>
+          <p>
+            Autor: Damián Pitek <br />
+            &copy; All rights reserved <br />
+          </p>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>

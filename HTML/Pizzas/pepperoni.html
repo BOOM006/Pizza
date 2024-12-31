@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/Styles/pizza-pages.css" />
+    <link rel="icon" href="/obrazky/logo.png" />
     <title>Pepperoni</title>
   </head>
   <body>
@@ -11,7 +12,7 @@
       <div class="header-title-line">
         <div class="header-content">
           <div class="logo">
-            <img src="/obrazky/logo.png" alt="logo" title="Dami Pizza">
+            <img src="/obrazky/logo.png" alt="logo" title="Dami Pizza" />
           </div>
           <div class="h1">
             <h1>Dami Pizza</h1>
@@ -25,15 +26,17 @@
       </div>
       <nav class="mobile">
         <ul>
-          <li><a href="/index.html">Úvod</a></li>
-          <li><a href="/HTML/index.html">Ponuka</a></li>
+          <li><a href="/HTML/index.html">Úvod</a></li>
+          <li><a href="/HTML/ponuka.html">Ponuka</a></li>
           <li><a href="#foto">Sociálne siete</a></li>
           <li><a href="/HTML/kontakt.html">Kontakt</a></li>
         </ul>
       </nav>
     </header>
     <main>
-      <h2>Pepperoni</h2>
+      <div class="h2-wrapper">
+        <h2>Pepperoni</h2>
+      </div>
       <section id="info">
         <div class="main-container">
           <div class="image-and-text">
@@ -48,8 +51,7 @@
             <div class="text">
               <p>
                 Pizza s paradajkovou omáčkou, mozzarellou a bohatým množstvom
-                pikantnej pepperoni salámy. Ideálna voľba pre milovníkov
-                pikantných chutí!
+                pikantnej pepperoni salámy.
               </p>
             </div>
           </div>
@@ -72,59 +74,66 @@
                 </td>
                 <td>
                   <ul>
-                    <li>1 – Obilniny obsahujúce lepok (cesto)</li>
-                    <li>7 – Mlieko a výrobky z neho (mozzarella)</li>
-                    <li>12 – Zelenina (oregano, paradajková omáčka)</li>
+                    <li>1 – Obilniny obsahujúce <span> lepok (cesto)</span></li>
+                    <li>
+                      7 – Mlieko a výrobky <span> z neho (mozzarella)</span>
+                    </li>
+                    <li>
+                      12 – Zelenina (oregano, <span>paradajková omáčka)</span>
+                    </li>
                   </ul>
                 </td>
               </tr>
             </table>
+
+            <div class="payment-container">
+              <div class="payment-button">
+                <a href="/HTML/payment.html">Objednať</a>
+              </div>
+              <div class="size-container">
+                <label for="platba">Veľkosť:</label>
+                <select id="platba">
+                  <option value="small">Malá (25 cm): 7,00&euro;</option>
+                  <option value="normal">Stredná (30 cm): 9,00&euro;</option>
+                  <option value="big">Veľká (40 cm): 11,00&euro;</option>
+                </select>
+              </div>
+            </div>
           </div>
 
-          <div class="payment-container">
-            <div class="payment-button">
-              <a href="/HTML/payment.html">Objednať</a>
-            </div>
-            <div class="size">
-              <label for="platba">Veľkosť:</label>
-              <select id="platba">
-                <option value="visa">Malá (25 cm): 7,00&euro;</option>
-                <option value="mastercard">Stredná (30 cm): 9,00&euro;</option>
-                <option value="gpay">Veľká (40 cm): 11,00&euro;</option>
-              </select>
-            </div>
-          </div>
-        </div>
-        <div class="calories">
-          <table>
-            <caption>
-              Kalorické hodnoty a živiny (100 g)
-            </caption>
-            <tr>
-              <th>Energia</th>
-              <td>280 kcal</td>
-            </tr>
-            <tr>
-              <th>Bielkoviny</th>
-              <td>12 g</td>
-            </tr>
-            <tr>
-              <th>Tuky</th>
-              <td>15 g</td>
-            </tr>
-            <tr>
-              <th>Sacharidy</th>
-              <td>22 g</td>
-            </tr>
-            <tr>
-              <th>Vláknina</th>
-              <td>1,5 g</td>
-            </tr>
-            <tr>
-              <th>Sodík</th>
-              <td>1100 mg</td>
-            </tr>
-          </table>
+          <di1v class="calories">
+            <table>
+              <caption>
+                Kalorické hodnoty a živiny (100 g)
+              </caption>
+              <tbody>
+                <tr class="group1">
+                  <th>Energia</th>
+                  <td>280 kcal</td>
+                </tr>
+                <tr class="group1">
+                  <th>Bielkoviny</th>
+                  <td>12 g</td>
+                </tr>
+                <tr class="group1">
+                  <th>Tuky</th>
+                  <td>15 g</td>
+                </tr>
+                <tr class="group2">
+                  <th>Sacharidy</th>
+                  <td>22 g</td>
+                </tr>
+                <tr class="group2">
+                  <th>Vláknina</th>
+                  <td>1,5 g</td>
+                </tr>
+                <tr class="group2">
+                  <th>Sodík</th>
+                  <td>1100 mg</td>
+                </tr>
+              </tbody>
+            </table>
+          </di1v>
         </div>
       </section>
     </main>
@@ -133,7 +142,7 @@
       <div class="footer-container">
         <div class="footer" id="address">
           <img src="/obrazky/bod.png" />
-          <p>28.októbra , 911 01 Trenčín</p>
+          <p>Soblahovská 15, 911 01 Trenčín</p>
         </div>
         <div class="footer" id="mail">
           <a href="mailto:dam.pitek@gmail.com"
