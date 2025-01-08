@@ -5,8 +5,8 @@
   --GRADIENT-COLOR: rgb(246, 217, 217);
   --BGCOLOR: #e59885;
   --TABLE-BGCOLOR: hsla(0, 0%, 100%, 0.711);
-  --NAPOJ-BGCOLOR: hsla(0, 0%, 50%, 0.738);
   --FOOTER-BGCOLOR: rgb(194, 186, 186);
+  --ORDER-BGCOLOR: hsla(120, 82%, 46%, 0.427);
 
   /*FONTS*/
   --FF: "Times New Roman";
@@ -138,12 +138,10 @@ header {
 :is(header:hover, header:focus-within) nav {
   display: block;
 }
-
 :is(header:hover, header:focus-within) + main {
   margin-top: calc(6rem + 24px); /* Posun gridu o výšku navigácie */
   transition: margin-top 0.3s ease-in-out;
 }
-
 nav {
   background-color: hsla(0, 0%, 20%, 0.384);
   display: none;
@@ -198,86 +196,131 @@ nav a:focus {
   transition: all 0.3s;
 }
 
-.nav-ponuka {
-  display: flex;
+.h2-wrapper {
+  background-color: var(--TABLE-BGCOLOR);
+  padding-top: 1em;
+  border-radius: 3rem;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  width: 95%;
+  margin: 12rem auto;
+  margin-bottom: 0;
 }
 
-.nav-ponuka a {
-  text-decoration: none;
-}
-
-.nav-ponuka :hover {
-  background-color: grey;
-}
-
-.pizza {
-  width: 50%;
-  border-right: 3px solid var(--HEADER-BGCOLOR);
-}
-
-.coffee {
-  width: 50%;
-}
-
-.nav-ponuka-container {
-  margin-top: 13rem;
+h2 {
+  font-size: var(--FS-H2);
+  margin: auto;
+  margin-bottom: 0rem;
   text-align: center;
-  width: 95%;
-  justify-self: center;
-  justify-content: space-between;
-  background-color: var(--TABLE-BGCOLOR);
+  background-color: lightsalmon;
+  width: 30%;
   border-radius: 3rem;
+  border: 5px double red;
+  outline: lightcoral;
 }
 
-.napoje-container {
+#info {
+  background-color: var(--TABLE-BGCOLOR);
+  border-radius: 0;
+  border-bottom-left-radius: 3rem;
+  border-bottom-right-radius: 3rem;
   width: 95%;
+  margin: auto;
+  padding-bottom: 1rem;
+}
+
+.main-container {
   display: flex;
+  justify-content: space-between;
+}
+
+.image-and-text {
+  display: flex; /* Riadkový flexbox pre obrázok a tabuľku */
   flex-direction: column;
-  margin: 2rem auto;
-  background-color: var(--TABLE-BGCOLOR);
-  border-radius: 3rem;
-  padding-bottom: 2rem;
+  width: 33%;
 }
 
-.sytene-grid,
-.nesytene-grid,
-.energy-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(30%, 1fr));
-  gap: 0.5rem;
-  justify-items: center;
-}
-
-.sytene-grid img,
-.nesytene-grid img,
-.energy-grid img {
-  width: 160px;
-  height: 160px;
-}
-
-.h2 {
-  padding-top: 2rem;
+.image {
+  width: 55%;
   margin: auto;
 }
 
-.napoj {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-direction: column;
-  padding: 0.5rem;
-  width: 80%;
-  border: 2px solid #333;
-  background-color: var(--TABLE-BGCOLOR);
-  border-radius: 3rem;
+.image img {
+  padding-top: 2rem;
+  border-radius: 50%;
+  padding-left: 1rem;
+  width: 100%;
+  height: auto;
 }
 
-.image-text {
+.text {
+  display: flex;
+  padding-left: 1rem;
+}
+
+.text p {
+  font-size: larger;
+  font-style: italic;
+  text-align: center;
+}
+
+.table-container {
+  padding-top: 2rem;
+  width: 46%;
+}
+
+.calories {
+  padding-top: 2rem;
+  width: 20%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.calories caption {
+  font-weight: bold;
+  padding-bottom: 2rem;
+}
+
+.payment-container {
+  display: flex;
+  flex-direction: column-reverse;
+  justify-self: center;
+  gap: 1rem;
+  margin-top: 3rem;
+  padding: 0.5rem 0;
+  padding-bottom: 0.8rem;
+  border-radius: 3rem;
+  background-color: hsla(17, 100%, 74%, 0.531);
+  width: 60%;
+}
+
+.size-container {
   display: flex;
   justify-content: center;
+  gap: 1rem;
+}
+
+.payment-button {
+  text-align: center;
+}
+
+.payment-button a {
+  background-color: rgb(219, 101, 101);
+  border-radius: 3rem;
+  text-decoration: none;
+  color: black;
+  padding: 0.4rem;
+}
+
+#platba {
+  font-size: 15px;
+  background-color: hsla(17, 100%, 74%, 1);
+  border: none;
+  border-radius: 0.5rem;
 }
 
 .footer-container {
+  margin-top: 1rem;
   background-color: var(--FOOTER-BGCOLOR);
   display: flex;
   justify-content: space-around;
@@ -310,6 +353,11 @@ nav a:focus {
 .socials {
   display: flex;
   justify-content: space-around;
+}
+
+span {
+  display: block;
+  text-indent: 2.5rem;
 }
 
 @media (max-width: 768px) {
@@ -374,41 +422,88 @@ nav a:focus {
     margin-top: calc(0rem + 0px); /* Posun gridu o výšku navigácie */
   }
 
+  .h2-wrapper {
+    padding-top: 1em;
+    margin: 1rem auto;
+    margin-bottom: 0;
+  }
+
   h2 {
     margin-top: 0rem;
+    width: 50%;
   }
 
-  main {
-    margin-top: 0.5rem;
+  .main-container {
+    flex-direction: column;
+    justify-content: center;
+    padding-bottom: 7rem;
   }
-
-  .nav-ponuka-container {
-    margin-top: 0.5rem;
+  .image-and-text {
+    width: 100%;
+    order: 1;
   }
-
-  .napoje-container {
-    margin: 1rem auto;
-  }
-
-  .sytene-grid,
-  .nesytene-grid,
-  .energy-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(100%, 1fr));
-    gap: 0.5rem;
-    justify-items: center;
-  }
-
   .image {
-    width: 100px; /* Väčší obrázok na mobil */
+    width: 55%;
+    display: flex;
+    justify-content: center;
+  }
+  .image img {
+    padding-left: 0;
   }
 
-  .image-text ul {
+  .text {
     padding: 0;
   }
 
-  .centering {
-    margin: 0 10px;
+  .table-container {
+    width: 100%;
+    order: 2;
+    position: relative; /* Umožní absolutné umiestnenie vnorených prvkov */
+    padding: 0;
+  }
+
+  .calories {
+    width: 100%;
+    order: 3;
+    padding: 0;
+  }
+
+  .calories caption {
+    text-align: center;
+    padding-bottom: 0.5rem;
+  }
+
+  .calories th,
+  .calories td {
+    padding: 5px;
+    display: inline-block;
+  }
+
+  .calories tbody {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .calories .group1 {
+    flex: 1 1 45%;
+  }
+
+  .calories .group2 {
+    flex: 1 1 45%;
+  }
+
+  .payment-container {
+    position: absolute;
+    top: 158%; /* Umiestni payment-container pod table-container */
+    left: 50%; /* Posunie payment-container do stredu */
+    transform: translateX(-50%); /* Vycentruje payment-container horizontálne */
+    margin-top: 0.1rem; /* Pridá medzeru medzi tabuľkou a payment-container */
+    width: 95%;
+    padding-bottom: 0.8rem;
+  }
+
+  span {
+    display: inline;
   }
 
   .footer-container {
