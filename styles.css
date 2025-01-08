@@ -11,7 +11,7 @@
   --FF: "Times New Roman";
   --FS-TEXT: clamp(1rem, 1.8vw, 5rem); /*Texty - a, p*/
   --FS-H1: clamp(2rem, 2.5vw, 6rem); /*Nadpis h1*/
-  --FS-H2: clamp(1.8rem, 2.5vw, 6rem); /*Nadpis h2*/
+  --FS-H2: clamp(1.6rem, 2.5vw, 6rem); /*Nadpis h2*/
   --FS-H3: clamp(1.5rem, 2.2vw, 5.8rem); /*Nadpis h3*/
 }
 
