@@ -463,6 +463,12 @@ span {
     margin: auto;
   }
 
+  .table-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 0;
+  }
+
   .calories {
     width: 100%;
     padding: 0;
