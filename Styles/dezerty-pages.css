@@ -226,7 +226,6 @@
     border-bottom-right-radius: 3rem;
     width: 95%;
     margin: auto;
-    padding-bottom: 1rem;
   }
   
   .main-container {
@@ -440,7 +439,7 @@
   
     h2 {
       margin-top: 0rem;
-      width: 50%;
+      width: 70%;
     }
   
     .main-container {
@@ -504,10 +503,10 @@
   
     .payment-container {
       position: absolute;
-      top: 175%; /* Umiestni payment-container pod table-container */
+      top: 165%; /* Umiestni payment-container pod table-container */
       left: 50%; /* Posunie payment-container do stredu */
       transform: translateX(-50%); /* Vycentruje payment-container horizontálne */
-      margin-top: 1rem; /* Pridá medzeru medzi tabuľkou a payment-container */
+      margin-top: 0.1rem; /* Pridá medzeru medzi tabuľkou a payment-container */
       width: 95%;
       padding-bottom: 0.8rem;
     }
