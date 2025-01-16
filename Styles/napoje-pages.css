@@ -38,7 +38,6 @@ body img {
 header {
   background-color: var(--HEADER-BGCOLOR);
   color: var(--HEADER-COLOR);
-  margin-bottom: 3rem;
   position: fixed;
   top: 0;
   width: 100%; /* Šírka cez celú obrazovku */
@@ -139,7 +138,7 @@ header {
   display: block;
 }
 :is(header:hover, header:focus-within) + main {
-  margin-top: calc(19rem + 24px); /* Posun gridu o výšku navigácie */
+  margin-top: calc(3rem + 24px); /* Posun gridu o výšku navigácie */
   transition: margin-top 0.3s ease-in-out;
 }
 nav {
@@ -208,11 +207,6 @@ nav a:focus {
   background-color: grey;
 }
 
-:is(header:hover, header:focus-within) + main {
-  margin-top: calc(6rem + 24px); /* Posun gridu o výšku navigácie */
-  transition: margin-top 0.3s ease-in-out;
-}
-
 .h2-wrapper {
   background-color: var(--TABLE-BGCOLOR);
   padding-top: 1em;
@@ -279,6 +273,10 @@ h2 {
   font-size: larger;
   font-style: italic;
   text-align: center;
+}
+
+.table-container {
+  margin-top: 4rem;
 }
 
 .calories-payment-container {

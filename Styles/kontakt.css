@@ -15,6 +15,10 @@
   --FS-H3: clamp(1.5rem, 2.2vw, 5.8rem); /*Nadpis h3*/
 }
 
+html {
+  scroll-padding-top: 240px; /* Výška fixnej navigácie */
+}
+
 body {
   min-height: 100vh;
   display: flex;
@@ -138,7 +142,7 @@ header {
   display: block;
 }
 :is(header:hover, header:focus-within) + main {
-  margin-top: calc(6rem + 24px); /* Posun gridu o výšku navigácie */
+  margin-top: calc(3rem + 24px); /* Posun gridu o výšku navigácie */
   transition: margin-top 0.3s ease-in-out;
 }
 nav {
@@ -259,9 +263,42 @@ span {
   justify-content: space-around;
 }
 
+#faq {
+  background-color: var(--TABLE-BGCOLOR);
+  width: 96%;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  border-radius: 3rem;
+}
+
+#faq h2 {
+  text-align: center;
+}
+
+.question {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  text-align: center;
+  background-color: var(--TABLE-BGCOLOR);
+  width: 95%;
+  margin-bottom: 1rem;
+  border-radius: 3rem;
+}
+
+.question h3 {
+  margin: 1rem;
+}
+
+.answer p {
+  margin-top: 0;
+}
+
 .forms {
   display: flex;
   margin: auto;
+  margin-top: 2rem;
   width: 75%;
   flex-direction: column;
   text-align: center;

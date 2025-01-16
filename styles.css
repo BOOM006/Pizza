@@ -15,7 +15,7 @@
   --FS-H3: clamp(1.5rem, 2.2vw, 5.8rem); /*Nadpis h3*/
 }
 
-body {
+body {  
   min-height: 100vh;
   display: flex;
   flex-flow: column nowrap;
@@ -138,7 +138,7 @@ header {
   display: block;
 }
 :is(header:hover, header:focus-within) + main {
-  margin-top: calc(6rem + 24px); /* Posun gridu o výšku navigácie */
+  margin-top: calc(3rem + 24px); /* Posun gridu o výšku navigácie */
   transition: margin-top 0.3s ease-in-out;
 }
 nav {
