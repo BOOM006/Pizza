@@ -498,6 +498,10 @@ input {
     width: 100%;
   }
 
+#faq h2 {
+  margin-top: 1rem;
+}
+
   .forms {
     width: 95%;
   }
